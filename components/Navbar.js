@@ -17,6 +17,18 @@ export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
+      <div style={{marginTop: "40px"}} className="sticky2 active:border-[3px] active:border-r-0 border-cyan-600 active:rounded mt-[10px] my-[3px] hidden lg:block">
+        <span style={{marginTop: "-10px"}}>🌐</span>
+        <select
+            onChange={changeLanguage}
+            defaultValue={locale}
+            className="text-white text-shadow-sm text-lg bg-transparent tracking-wide pd-[5]"
+        >
+          <option className="text-black" value="en">EN</option>
+          <option className="text-black" value="jp">JP</option>
+        </select>
+        {/*<Link href="#"> 🌐 言語 {t('app_title')} </Link>*/}
+      </div>
       <nav
         className="relative flex flex-wrap items-center justify-start py-3"
         style={{ backgroundColor: "#0e1447" }}
@@ -165,19 +177,11 @@ export default function Navbar({ fixed }) {
             </ul>
           </div>
 
-          <div style={{marginTop: "40px"}} className="sticky2 active:border-[3px] active:border-r-0 border-cyan-600 active:rounded mt-[10px] my-[3px] hidden lg:block">
-            <select
-                onChange={changeLanguage}
-                defaultValue={locale}
-                className="text-white text-shadow-sm text-lg bg-transparent tracking-wide pd-[5]"
-            >
-              <option className="text-black" value="en">EN</option>
-              <option className="text-black" value="jp">JP</option>
-            </select>
-            {/*<Link href="#"> 🌐 言語 {t('app_title')} </Link>*/}
-          </div>
         </div>
+
       </nav>
+
+
     </>
   );
 }

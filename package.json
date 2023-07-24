@@ -2,13 +2,13 @@
   "name": "exegroup",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://group.exe.mn",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "export": "next export",
-    "lint": "next lint"
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
   },
+
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
@@ -24,7 +24,7 @@
     "font-awesome": "^4.7.0",
     "i18next": "^23.2.11",
     "lazyload": "^2.0.0-rc.2",
-    "next": "12.3.1",
+    "next": "^13.4.12",
     "next-i18next": "^14.0.0",
     "next-intl": "^2.7.6",
     "next-translate": "^1.6.0",
@@ -45,8 +45,9 @@
   "devDependencies": {
     "autoprefixer": "^10.4.11",
     "eslint": "8.23.1",
-    "eslint-config-next": "12.3.1",
+    "eslint-config-next": "^13.4.12",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   }
 }
+
